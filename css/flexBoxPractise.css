@@ -1,0 +1,76 @@
+body {
+	font-size: 1.125rem;
+	color: #707070;
+	margin: 0;
+	background: orange;
+}
+/* changing color of body from minimum width of 400px and bigger*/
+@media (min-width: 400px) {
+	body {
+		background: pink;
+	}
+}
+/* changing color of body from minimum width of 600px and bigger*/
+@media (min-width: 600px) {
+	body {
+		background: purple;
+	}
+}
+/* typopraphy */
+h1 {
+	font-size: 3rem;
+	color: #212614;
+	text-align: center;
+}
+h2 {
+	font-size: 1.5rem;
+}
+h1 span {
+	color: #b7632f;
+}
+p {
+	margin: 0;
+}
+
+/* layouts */
+.container {
+	width: 95%;
+	max-width: 680px;
+	margin: 0 auto;
+}
+.columns {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	/*border: 5px solid purple;*/
+	margin: 1em 0;
+}
+@media (max-width: 400px) {
+	.columns {
+		flex-direction: column;
+	}
+}
+.col {
+	/*border: 2px solid magenta;*/
+}
+.col-1 {
+	width: 20%;
+}
+.col-2 {
+	width: 45%;
+}
+.col-3 {
+	width: 70%;
+}
+.col-bg {
+	background: #212614;
+	color: #fff;
+	padding: 1em;
+}
+@media (max-width: 400px) {
+	.col-1,
+	.col-2,
+	.col-3 {
+		width: 100%;
+	}
+}

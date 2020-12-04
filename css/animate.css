@@ -1,0 +1,84 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #ffCE00;
+	font-family: 'Roboto', 'Helvetica', Arial, sans-serif;
+}
+main{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 25px;
+
+	width: 100%;
+	max-width: 765px;
+	height: 100vh;
+}
+.title{
+	position: relative;
+	text-align: center;
+	color: #171717;
+	font-size: 36px;
+	font-weight: 900;
+	margin: 15px 0px;
+
+	left: -100%;
+
+	animation: slideIn 0.5s 0.5s forwards cubic-bezier(.5, .5, .5, 1.5);
+}
+.title span {
+	font-weight: 300;
+}
+.contant{
+	position: relative;
+	color: #171717;
+	opacity: 0.75;
+	font-size: 18px;
+	margin: 15px 8px;
+	top: -100%;
+
+	animation: fallIn 0.5s linear 1s forwards;
+}
+.btn{
+	display: block;
+	width: 200px;
+	margin: 0 auto;
+	padding: 0px;
+
+	color: #171717;
+	font-size: 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	line-height: 50px;
+
+	opacity: 0;
+
+	border: 2px solid #171717;
+
+	background-image: linear-gradient(to right, #171717 50%, transparent 50%);
+	background-position: 100% 0%;
+	background-size: 200% 100%;
+	transition: 0.5s;
+
+	animation: fadeIn 1s linear 1.5s forwards;
+}
+
+.btn:hover{
+	color: #f3f3f3;
+	background-position: 0% 50%;
+}
+
+@keyframes slideIn {
+	from { left: -100%; }
+	to { left: 0%; }
+}
+
+@keyframes fallIn {
+	from { top: -100%; }
+	to { top: 0%; }
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
